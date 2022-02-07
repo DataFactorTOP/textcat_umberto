@@ -1,0 +1,22 @@
+preprocess:
+  cmd: python -m spacy run preprocess
+  script:
+    - python scripts/convert_corpus.py
+  deps:
+    - path: assets/train.tsv
+      md5: d16a20dc7f8f1c834c6c1decd252f85e
+    - path: assets/dev.tsv
+      md5: 860226e39108a692837c4ed88edee044
+    - path: assets/test.tsv
+      md5: 759e45ef63c5635632099da4d810cd93
+    - path: assets/categories.txt
+      md5: 09ef90816c51845614d5914570553a37
+  outs:
+    - path: corpus/train.spacy
+      md5: e4d5cebb68e88c07f909b24226d53b54
+    - path: corpus/dev.spacy
+      md5: c45b4c8a4737add0dd7716ba5a086c24
+    - path: corpus/test.spacy
+      md5: c4201b19c2c7ce2bdcbfeb56037cb160
+  spacy_version: 3.0.7
+  spacy_git_version: 034ac0acf
