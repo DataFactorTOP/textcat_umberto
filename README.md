@@ -14,7 +14,7 @@ pip install https://github.com/Gianpe/texcat_umberto/releases/download/v0.0.1/it
 import spacy
 
 text = "che disorganizzazione ad agrigento! sono in quarantena da 7 giorni e non ho ancora ricevuto una chiamata dalla provincia"
-nlp = spacy.load("it_textcat_umberto")
+nlp = spacy.load("it_textcat_emotion_umberto")
 demo = nlp(text)
 print(demo.cats)
 ```
